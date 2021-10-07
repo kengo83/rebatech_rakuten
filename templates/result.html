@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container'>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <h1>検索結果の表示</h1>
+        </blockquote>
+    </figure>
+    {% for post1,post2 in list %}
+    {% for pic in pic_list %}
+    <div class='result'>
+        <a href="{{ post2 }}">
+            <img src="{{ pic }}">
+        </a>
+        <p>{{ post1 }}</p>
+    </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+{% endblock content %}
